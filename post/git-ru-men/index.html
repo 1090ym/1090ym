@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+<title>git入门 - Mario Yin</title>
+<meta name="description" content="记录每一天">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link type='text/css' rel='stylesheet' href='https://1090ym.github.io/styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src='https://1090ym.github.io/media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</head>
+
+<body>
+  <div class="layout theme-dark">
+    <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="https://1090ym.github.io">
+								<img class="logo"
+									src="https://1090ym.github.io/media/images/site_avatar.png?v=1594154327758"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="首页"
+										href="/">首页</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="归档"
+										href="/archives">归档</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="标签"
+										href="/tags">标签</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="关于"
+										href="/post/about">关于</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
+
+
+
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1594154327758" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+    <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="首页" href="/">首页</a></li>
+			
+			<li class="layout-collapse-item"><a title="归档" href="/archives">归档</a></li>
+			
+			<li class="layout-collapse-item"><a title="标签" href="/tags">标签</a></li>
+			
+			<li class="layout-collapse-item"><a title="关于" href="/post/about">关于</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+    <div class="layout-content">
+      <div class="layout-content-main">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-9">
+              <div class="layout-post">
+                <div class="layout-post-body">
+                  <div class="row">
+
+                    <div class="col-12 col-lg-10">
+                      <div class="layout-post-main m-right m-md-right">
+                        <div class="layout-post-header">
+                          <h1 class="layout-post-title">git入门</h1>
+                          <div class="layout-post-meta">
+                            <div class="item">
+                               <a href="https://1090ym.github.io/tag/7UuVHfndn2/" class="post--keyword"
+                                data-title="git" data-type="post_tag" data-term-id="39">git</a>
+                              
+                            </div>
+                            <div class="item">
+                              <span>2020-03-03</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layout-post-content">
+                          <div class="layout-post-item">
+                            
+                            <p class="with-img"><img src="https://cdn.jsdelivr.net/gh/1090ym/image/img/jakob-owens-CiUR8zISX60-unsplash.jpg"
+                                class="attachment-full size-full wp-post-image" alt="git入门" /></p>
+                            
+                            <h2 id="创建git仓库">创建git仓库</h2>
+<pre><code>mkdir 仓库名
+</code></pre>
+<h2 id="进入目录">进入目录</h2>
+<pre><code>cd 目录名
+</code></pre>
+<h2 id="查看目录">查看目录</h2>
+<pre><code>pwd
+</code></pre>
+<h2 id="命令把这个目录变成git可以管理的仓库">命令把这个目录变成Git可以管理的仓库</h2>
+<ul>
+<li>第一步，通过<code>git init</code>命令控制仓库</li>
+<li>第二步，用命令git add告诉Git，把文件添加到仓库：<code>git add readme.txt</code></li>
+<li>第三步，用命令git commit告诉Git，把文件提交到仓库：<code>git commit -m &quot;wrote a readme file&quot;</code></li>
+</ul>
+<h2 id="查看git工作状态和修改情况">查看git工作状态和修改情况</h2>
+<ul>
+<li>要随时掌握工作区的状态，使用<code>git status</code>命令。</li>
+<li>如果git status告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容</li>
+</ul>
+<h2 id="git版本回退">git版本回退</h2>
+<ul>
+<li><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code></li>
+<li>回退到上个版本：<code>git reset --hard HEAD^</code>,上上个版本<code>git reset --hard HEAD^^</code></li>
+<li>查看版本id：<code>git log --pretty=oneline</code></li>
+<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
+</ul>
+<h2 id="工作区和暂存区">工作区和暂存区</h2>
+<ul>
+<li><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支</li>
+</ul>
+<p>##撤销和修改</p>
+<ul>
+<li>当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code></li>
+<li>当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</li>
+</ul>
+<h2 id="删除文件">删除文件</h2>
+<ul>
+<li>命令<code>git rm filename</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容</li>
+<li>恢复：<code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</li>
+</ul>
+<h2 id="git推送到远程仓库">git推送到远程仓库</h2>
+<ul>
+<li>
+<p>关联远程库： <code>git remote add origin git仓库网址</code> 或者 <code>git remote add origin git@github.com:用户名/git仓库名</code></p>
+</li>
+<li>
+<p>推送本地库到远程库：<code>git push -u origin master</code></p>
+</li>
+<li>
+<p>输入上一步命令后，只要本地做了提交，使用<code>git push origin master</code>就可以把本地master分支的最新修改推送至GitHub</p>
+</li>
+<li>
+<p>注意：如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git <br>
+    提示出错信息：fatal: remote origin already exists.<br>
+    解决办法如下：</p>
+<ul>
+<li>1、先输入$ git remote rm origin</li>
+<li>2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！</li>
+<li>3、如果输入$ git remote rm origin 还是报错的话，error: Could not remove config section 'remote.origin'. 我们需要修改gitconfig文件的内容</li>
+<li>4找到你的github的安装路径，找到一个名为gitconfig的文件，打开它把里面的[remote &quot;origin&quot;]那一行删掉就好了！</li>
+</ul>
+</li>
+<li>
+<p>克隆远程库<br>
+<code>git clone git@github.com:用户名/仓库名.git</code></p>
+</li>
+</ul>
+<h2 id="分支管理">分支管理</h2>
+<ul>
+<li>
+<p>Git鼓励大量使用分支：</p>
+</li>
+<li>
+<p>查看分支：<code>git branch</code></p>
+</li>
+<li>
+<p>创建分支：<code>git branch &lt;name&gt;</code></p>
+</li>
+<li>
+<p>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code></p>
+</li>
+<li>
+<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code></p>
+</li>
+<li>
+<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
+</li>
+<li>
+<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+</li>
+</ul>
+<h2 id="git分支合并出现冲突">git分支合并出现冲突</h2>
+<ul>
+<li>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成</li>
+<li>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。</li>
+<li>用<code>git log --graph --pretty=oneline --abbrev-commit</code>命令可以看到分支合并图。</li>
+</ul>
+<h2 id="git暂存分支">git暂存分支</h2>
+<ul>
+<li>先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场</li>
+<li>在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重复劳动</li>
+</ul>
+<h2 id="查看远程库">查看远程库</h2>
+<ul>
+<li>查看远程库信息：<code>git remote -v</code></li>
+<li>推送本地分支：<code>$ git push origin master</code></li>
+<li>克隆远程分支：<code>git clone git@github.com:用户名/仓库名.git</code></li>
+<li>创建远程origin的dev分支到本地：<code>git checkout -b dev origin/dev</code></li>
+<li>多人协作
+<ul>
+<li>
+<p>首先，可以试图用<code>git push origin &lt;branch-name&gt;</code>推送自己的修改；</p>
+</li>
+<li>
+<p>如果推送失败，则因为远程分支比你的本地更新，需要先用<code>git pull</code>试图合并；</p>
+</li>
+<li>
+<p>如果合并有冲突，则解决冲突，并在本地提交；</p>
+</li>
+<li>
+<p>没有冲突或者解决掉冲突后，再用<code>git push origin &lt;branch-name&gt;</code>推送就能成功！</p>
+</li>
+<li>
+<p>如果<code>git pull</code>提示<code>no tracking information</code>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;</code>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="出现的问题">出现的问题：</h3>
+<ul>
+<li>出现错误：fatal: refusing to merge unrelated histories
+<ul>
+<li>因为两个分支没有取得连续：<code>git pull origin master --allow-unrelated-histories</code></li>
+</ul>
+</li>
+</ul>
+
+                          </div>
+                        </div>
+                        <div class="layout-post-social">
+                          <div class="item reader">
+                            <div id="/post/git-ru-men/" class="leancloud-visitors view"
+                              data-flag-title="git入门">
+                              <span class="post-meta-item-text">阅读 </span>
+                              <span class="leancloud-visitors-count"></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="layout-post-navigation">
+                          <div class="navigation-list">
+                            
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-8 col-md-9">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://1090ym.github.io/post/java-xue-xi-pian-huan-jing-da-jian/" class="title">
+                                      <h4>JAVA学习篇：环境搭建</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner d-none d-sm-block">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>上一篇</span></div>
+                                  <div class="item">2020-03-04</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="https://1090ym.github.io/post/java-xue-xi-pian-huan-jing-da-jian/"
+                                    style="background-image: url('https://cdn.jsdelivr.net/gh/1090ym/image/img/markus-spiske-466ENaLuhLY-unsplash.jpg');"></a>
+                                </div>
+                              </div>
+                              
+                            </div>
+
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-8 col-md-9">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://1090ym.github.io/post/di-yi-pian-bo-ke/" class="title">
+                                      <h4>第一篇博客</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner d-none d-sm-block">
+                                    <div class="abstract">
+                                      <p>📝开始写博客啦。😄❤️</p>
+
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>下一篇</span></div>
+                                  <div class="item">2020-03-03</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="https://1090ym.github.io/post/di-yi-pian-bo-ke/"
+                                    style="background-image: url('https://cdn.jsdelivr.net/gh/1090ym/image/img/ball-basketball-basketball-court-basketball-hoop-1752757.jpg');"></a>
+                                </div>
+                              </div>
+                              
+                            </div>
+
+                            
+                          </div>
+                        </div>
+
+                        <div class="layout-comments"></div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
+                      <div class="layout-post-sidebar">
+                        <div class="layout-sidebar-item">
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BAgit%E4%BB%93%E5%BA%93">创建git仓库</a></li>
+<li><a href="#%E8%BF%9B%E5%85%A5%E7%9B%AE%E5%BD%95">进入目录</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95">查看目录</a></li>
+<li><a href="#%E5%91%BD%E4%BB%A4%E6%8A%8A%E8%BF%99%E4%B8%AA%E7%9B%AE%E5%BD%95%E5%8F%98%E6%88%90git%E5%8F%AF%E4%BB%A5%E7%AE%A1%E7%90%86%E7%9A%84%E4%BB%93%E5%BA%93">命令把这个目录变成Git可以管理的仓库</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8Bgit%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E5%92%8C%E4%BF%AE%E6%94%B9%E6%83%85%E5%86%B5">查看git工作状态和修改情况</a></li>
+<li><a href="#git%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80">git版本回退</a></li>
+<li><a href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E6%9A%82%E5%AD%98%E5%8C%BA">工作区和暂存区</a></li>
+<li><a href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6">删除文件</a></li>
+<li><a href="#git%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93">git推送到远程仓库</a></li>
+<li><a href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86">分支管理</a></li>
+<li><a href="#git%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%E5%87%BA%E7%8E%B0%E5%86%B2%E7%AA%81">git分支合并出现冲突</a></li>
+<li><a href="#git%E6%9A%82%E5%AD%98%E5%88%86%E6%94%AF">git暂存分支</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%BA%93">查看远程库</a>
+<ul>
+<li><a href="#%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98">出现的问题：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+    	<div class="layout-footer">
+
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									<span>© 2020 </span>
+									<a href="https://1090ym.github.io" title="Mario Yin">Mario Yin</a>
+									<span class="px-2">⋅</span>
+									
+									Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Mario Yin</a>
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src='https://1090ym.github.io/media/scripts/main.js'></script>
+	
+
+  </div>
+</body>
+
+</html>

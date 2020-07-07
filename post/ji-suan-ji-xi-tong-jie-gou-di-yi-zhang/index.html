@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+<title>计算机系统结构 第一章 - Mario Yin</title>
+<meta name="description" content="记录每一天">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link type='text/css' rel='stylesheet' href='https://1090ym.github.io/styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src='https://1090ym.github.io/media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</head>
+
+<body>
+  <div class="layout theme-dark">
+    <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="https://1090ym.github.io">
+								<img class="logo"
+									src="https://1090ym.github.io/media/images/site_avatar.png?v=1594154327758"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="首页"
+										href="/">首页</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="归档"
+										href="/archives">归档</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="标签"
+										href="/tags">标签</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="关于"
+										href="/post/about">关于</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
+
+
+
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1594154327758" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+    <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="首页" href="/">首页</a></li>
+			
+			<li class="layout-collapse-item"><a title="归档" href="/archives">归档</a></li>
+			
+			<li class="layout-collapse-item"><a title="标签" href="/tags">标签</a></li>
+			
+			<li class="layout-collapse-item"><a title="关于" href="/post/about">关于</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+    <div class="layout-content">
+      <div class="layout-content-main">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-9">
+              <div class="layout-post">
+                <div class="layout-post-body">
+                  <div class="row">
+
+                    <div class="col-12 col-lg-10">
+                      <div class="layout-post-main m-right m-md-right">
+                        <div class="layout-post-header">
+                          <h1 class="layout-post-title">计算机系统结构 第一章</h1>
+                          <div class="layout-post-meta">
+                            <div class="item">
+                               <a href="https://1090ym.github.io/tag/8QVfZJa4To/" class="post--keyword"
+                                data-title="系统结构" data-type="post_tag" data-term-id="39">系统结构</a>
+                              
+                            </div>
+                            <div class="item">
+                              <span>2020-03-10</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layout-post-content">
+                          <div class="layout-post-item">
+                            
+                            <p class="with-img"><img src="https://cdn.jsdelivr.net/gh/1090ym/image/img/11354.jpg"
+                                class="attachment-full size-full wp-post-image" alt="计算机系统结构 第一章" /></p>
+                            
+                            <h4 id="系统结构基础">系统结构基础</h4>
+<ul>
+<li>理论基础：图灵机
+<ul>
+<li>处理：读写头</li>
+<li>存储：无限长的带子</li>
+<li>传输：带子的移动</li>
+</ul>
+</li>
+<li>结构基础：冯诺伊曼结构</li>
+<li>物质基础：摩尔定律</li>
+</ul>
+<h4 id="加快经常性事件">加快经常性事件</h4>
+<ul>
+<li>
+<p>CISC</p>
+<ul>
+<li>采用新指令</li>
+<li>用硬件替代软件，指令替代子程序</li>
+<li>复杂的指令集</li>
+<li>复杂的指令集</li>
+<li>较少的寄存器</li>
+<li>简洁的软件代码</li>
+</ul>
+</li>
+<li>
+<p>RISC</p>
+<ul>
+<li>90%的时间使用的是10%的指令</li>
+<li>精简的指令集</li>
+<li>更简单的硬件</li>
+<li>较多的寄存器</li>
+<li>更多的软件代码</li>
+</ul>
+</li>
+<li>
+<p>高速缓存Cache</p>
+<ul>
+<li>利用局部性原理</li>
+<li>使访存的速度和处理器的速度匹配</li>
+</ul>
+</li>
+</ul>
+<h4 id="amdahl定律">Amdahl定律</h4>
+<ul>
+<li>
+<p>加速比：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">新</mi><mi mathvariant="normal">速</mi><mi mathvariant="normal">度</mi></mrow><mrow><mi mathvariant="normal">老</mi><mi mathvariant="normal">速</mi><mi mathvariant="normal">度</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi mathvariant="normal">新</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">间</mi></mrow><mrow><mi mathvariant="normal">老</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">间</mi></mrow></mfrac><mo>=</mo><mfrac><msub><mi>T</mi><mi>o</mi></msub><msub><mi>T</mi><mi>n</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">S_n = \frac{新速度}{老速度} = \frac{新时间}{老时间} = \frac{T_o}{T_n}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.363em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.677em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">老</span><span class="mord cjk_fallback">速</span><span class="mord cjk_fallback">度</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">新</span><span class="mord cjk_fallback">速</span><span class="mord cjk_fallback">度</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.363em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.677em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">老</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">间</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">新</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">间</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</li>
+<li>
+<p>基本Amdahl定律：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msub><mi>F</mi><mi>e</mi></msub><mo>)</mo><mo>+</mo><mfrac><msub><mi>F</mi><mi>e</mi></msub><msub><mi>S</mi><mi>e</mi></msub></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">S_n = \frac{1}{(1-F_e)+\frac{F_e}{S_e}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.544971em;vertical-align:-1.223531em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.221569em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8884309999999999em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285719em;"><span style="top:-2.357em;margin-left:-0.05764em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285719em;"><span style="top:-2.357em;margin-left:-0.13889em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.223531em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>F</mi><mi>e</mi></msub><mi mathvariant="normal">：</mi><mi mathvariant="normal">被</mi><mi mathvariant="normal">改</mi><mi mathvariant="normal">进</mi><mi mathvariant="normal">部</mi><mi mathvariant="normal">分</mi><mi mathvariant="normal">原</mi><mi mathvariant="normal">执</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">间</mi><mi mathvariant="normal">占</mi><mi mathvariant="normal">原</mi><mi mathvariant="normal">总</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">间</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">百</mi><mi mathvariant="normal">分</mi><mi mathvariant="normal">比</mi></mrow><annotation encoding="application/x-tex">F_e：被改进部分原执行时间占原总时间的百分比
+
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">被</span><span class="mord cjk_fallback">改</span><span class="mord cjk_fallback">进</span><span class="mord cjk_fallback">部</span><span class="mord cjk_fallback">分</span><span class="mord cjk_fallback">原</span><span class="mord cjk_fallback">执</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">间</span><span class="mord cjk_fallback">占</span><span class="mord cjk_fallback">原</span><span class="mord cjk_fallback">总</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">间</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">百</span><span class="mord cjk_fallback">分</span><span class="mord cjk_fallback">比</span></span></span></span></span></p>
+</li>
+</ul>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>S</mi><mi>e</mi></msub><mi mathvariant="normal">：</mi><mi mathvariant="normal">被</mi><mi mathvariant="normal">改</mi><mi mathvariant="normal">进</mi><mi mathvariant="normal">部</mi><mi mathvariant="normal">分</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">部</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">速</mi><mi mathvariant="normal">比</mi></mrow><annotation encoding="application/x-tex">
+  S_e：被改进部分的部件加速比
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">被</span><span class="mord cjk_fallback">改</span><span class="mord cjk_fallback">进</span><span class="mord cjk_fallback">部</span><span class="mord cjk_fallback">分</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">部</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">速</span><span class="mord cjk_fallback">比</span></span></span></span></span></p>
+<ul>
+<li>
+<p>Amdahl定律的性能递减规则：</p>
+<ul>
+<li>如果仅仅对计算机中的一部分进行性能改进，则改进越多，提升的性能越有限。</li>
+<li>为使系统获得较高的加速比，可增强部分必须占有较大比例。</li>
+</ul>
+</li>
+</ul>
+<h4 id="cpu性能公式">CPU性能公式</h4>
+<ul>
+<li>CPU时间　＝　IC　＊　CPI　＊　时钟周期时间</li>
+</ul>
+<h4 id="局部性原理">局部性原理</h4>
+<ul>
+<li>时间局部性：一个信息项正在被访问,那么近期它有可能再次被访问。</li>
+<li>空间局部性：程序即将用到的信息很可能与目前正在使用的信息在空间上相邻。</li>
+<li>高速缓存Cache利用了空间局部性。</li>
+</ul>
+<h4 id="并行性">并行性</h4>
+<ul>
+<li>处理数据角度：字串位串，字串位并，字并位串，全并行</li>
+<li>执行程序角度：指令内部并行，指令级并行，线程级并行，任务级或过程级并行，作业或程序级并行。</li>
+<li>提高并行性:
+<ul>
+<li>时间重叠</li>
+<li>资源重复</li>
+<li>资源共享</li>
+</ul>
+</li>
+</ul>
+<h4 id="计算机系统评价">计算机系统评价</h4>
+<ul>
+<li>性能（快）
+<ul>
+<li>用户角度：响应时间</li>
+<li>管理员角度：吞吐率</li>
+<li>MIPS</li>
+<li>程序执行时间</li>
+<li>MFLOPS</li>
+<li>基准测试程序</li>
+<li>基准测试程序套件</li>
+</ul>
+</li>
+<li>成本</li>
+<li>功耗
+<ul>
+<li>云端：电力成本</li>
+<li>终端：待机时间</li>
+</ul>
+</li>
+<li>可靠性
+<ul>
+<li>MTTF</li>
+</ul>
+</li>
+</ul>
+<h4 id="冯诺依曼结构的改进">冯诺依曼结构的改进</h4>
+<ul>
+<li>输入输出方式的改进：
+<ul>
+<li>程序控制
+<ul>
+<li>程序等待</li>
+<li>程序中断</li>
+</ul>
+</li>
+<li>DMA直接访问存储器</li>
+<li>I／O处理机</li>
+</ul>
+</li>
+<li>采用并行处理技术</li>
+<li>存储器：采用相联存储器，通用寄存器组，高速缓冲存储器</li>
+<li>指令系统：CISC，RISC</li>
+</ul>
+
+                          </div>
+                        </div>
+                        <div class="layout-post-social">
+                          <div class="item reader">
+                            <div id="/post/ji-suan-ji-xi-tong-jie-gou-di-yi-zhang/" class="leancloud-visitors view"
+                              data-flag-title="计算机系统结构 第一章">
+                              <span class="post-meta-item-text">阅读 </span>
+                              <span class="leancloud-visitors-count"></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="layout-post-navigation">
+                          <div class="navigation-list">
+                            
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-8 col-md-9">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://1090ym.github.io/post/java-xue-xi-pian/" class="title">
+                                      <h4>Java学习篇</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner d-none d-sm-block">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>上一篇</span></div>
+                                  <div class="item">2020-03-11</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="https://1090ym.github.io/post/java-xue-xi-pian/"
+                                    style="background-image: url('https://cdn.jsdelivr.net/gh/1090ym/image/img/apple-computer-desk-electronics-374857.jpg');"></a>
+                                </div>
+                              </div>
+                              
+                            </div>
+
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-8 col-md-9">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://1090ym.github.io/post/java-xue-xi-pian-huan-jing-da-jian/" class="title">
+                                      <h4>JAVA学习篇：环境搭建</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner d-none d-sm-block">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>下一篇</span></div>
+                                  <div class="item">2020-03-04</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="https://1090ym.github.io/post/java-xue-xi-pian-huan-jing-da-jian/"
+                                    style="background-image: url('https://cdn.jsdelivr.net/gh/1090ym/image/img/markus-spiske-466ENaLuhLY-unsplash.jpg');"></a>
+                                </div>
+                              </div>
+                              
+                            </div>
+
+                            
+                          </div>
+                        </div>
+
+                        <div class="layout-comments"></div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
+                      <div class="layout-post-sidebar">
+                        <div class="layout-sidebar-item">
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80">系统结构基础</a></li>
+<li><a href="#%E5%8A%A0%E5%BF%AB%E7%BB%8F%E5%B8%B8%E6%80%A7%E4%BA%8B%E4%BB%B6">加快经常性事件</a></li>
+<li><a href="#amdahl%E5%AE%9A%E5%BE%8B">Amdahl定律</a></li>
+<li><a href="#cpu%E6%80%A7%E8%83%BD%E5%85%AC%E5%BC%8F">CPU性能公式</a></li>
+<li><a href="#%E5%B1%80%E9%83%A8%E6%80%A7%E5%8E%9F%E7%90%86">局部性原理</a></li>
+<li><a href="#%E5%B9%B6%E8%A1%8C%E6%80%A7">并行性</a></li>
+<li><a href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%AF%84%E4%BB%B7">计算机系统评价</a></li>
+<li><a href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84%E7%9A%84%E6%94%B9%E8%BF%9B">冯诺依曼结构的改进</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+    	<div class="layout-footer">
+
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									<span>© 2020 </span>
+									<a href="https://1090ym.github.io" title="Mario Yin">Mario Yin</a>
+									<span class="px-2">⋅</span>
+									
+									Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Mario Yin</a>
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src='https://1090ym.github.io/media/scripts/main.js'></script>
+	
+
+  </div>
+</body>
+
+</html>
