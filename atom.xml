@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://1090ym.github.io</id>
     <title>Mario Yin</title>
-    <updated>2020-07-07T20:52:11.299Z</updated>
+    <updated>2020-07-07T21:18:42.374Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://1090ym.github.io"/>
     <link rel="self" href="https://1090ym.github.io/atom.xml"/>
@@ -10,6 +10,57 @@
     <logo>https://1090ym.github.io/images/avatar.png</logo>
     <icon>https://1090ym.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Mario Yin</rights>
+    <entry>
+        <title type="html"><![CDATA[递归总结]]></title>
+        <id>https://1090ym.github.io/post/di-gui-zong-jie/</id>
+        <link href="https://1090ym.github.io/post/di-gui-zong-jie/">
+        </link>
+        <updated>2020-07-07T20:53:39.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="递归总结">递归总结</h2>
+<h3 id="递归三大要素">递归三大要素</h3>
+<h5 id="第一要素明确这个函数想要干什么">第一要素：明确这个函数想要干什么</h5>
+<p>这个函数的功能是什么，不管代码怎么实现，先明确这个函数是用来干什么的。</p>
+<h5 id="第二要素寻找递归结束条件">第二要素：寻找递归结束条件</h5>
+<p>我们需要找出当参数为啥时，递归结束，然后返回结果。我们必须更具这个参数的值，能够知道函数的结果是什么。</p>
+<h5 id="第三要素找出函数的等价关系式">第三要素：找出函数的等价关系式</h5>
+<p>我们要不断缩小参数的范围，搜小之后，我们可以通过一些辅助的变量或操作，使原函数的结果不变。</p>
+<h5 id="例1斐波那契数列">例1：斐波那契数列</h5>
+<pre><code class="language-java">int f(int n) {
+    if(n &lt;= 2)
+        return n;
+    return f(n-1) + f(n-2);
+}
+</code></pre>
+<h5 id="案例2青蛙跳台阶">案例2：青蛙跳台阶</h5>
+<pre><code class="language-java">int f(int n) {
+    if(n &lt;= 2)
+        return n;
+    return f(n-1) + f(n-2);
+}
+</code></pre>
+<h5 id="案例3反转单链表">案例3：反转单链表</h5>
+<pre><code class="language-java">class Node {
+    int data;
+    Node next;
+}
+Node reverseList(Node head) {
+    if(head == null || head.next == null)
+        return head;
+    Node newNode = new Node();
+    newNode = reverseList(head.next);
+    
+    head.next.next = head;
+    head.next = null;
+    return newNode;
+}
+</code></pre>
+<h3 id="递归优化思路">递归优化思路</h3>
+<h5 id="1-考虑是否重复计算">1、考虑是否重复计算</h5>
+<p>把中间的计算结果保存起来，下次进行计算时，判断是否计算过，如果计算过，直接取出来使用就行了，没有计算过，再递归计算。</p>
+<h5 id="2-考虑是否可以自底向上">2、考虑是否可以自底向上</h5>
+<p>当n比较大时，从上往下递归可能会导致栈空间不太够用，这种情况可以考虑自底向上的做法，也叫做递推。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Java学习篇]]></title>
         <id>https://1090ym.github.io/post/java-xue-xi-pian/</id>
